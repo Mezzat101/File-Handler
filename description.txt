@@ -1,0 +1,28 @@
+---Description
+
+You are required to implement a multi-function command, that can handle files differently. Our command should accept requests via a named pipe, and share the output with the requester via shared memory.
+
+--Requirements
+
+We should have 2 applications
+File handler, the command should be fh
+A requester app that requests something from the fh
+The requester should
+Connect to the fh via a named pipe
+Request a list of all files in a particular directory
+Receive the list of files via shared memory
+Request from the fh to read the content of one of those files via the pipe
+receive the file content via shared memory
+The dh should
+Respond to the requester's requests
+Both apps should be written in C++
+Both apps should log their steps using the boost logger
+The logger should log into a file named run_logs.txt, not to the terminal
+Each log entry should have a number and a timestamp
+CMake should be used to build the whole project
+gtest should be used to test the project
+
+--Deliverables:
+
+The whole project
+The run_logs.txt file
